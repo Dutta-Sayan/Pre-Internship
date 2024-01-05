@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+        header{
+            background-color: lightgray;
+        }
+        .navdiv{
+            width: 1300px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navdiv ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li a{
+            color: rgb(9, 78, 107);
+            padding: 12px;
+        }
+        .navdiv li :hover{
+            background-color: black;
+            color: white;
+        }
+        .banner{
+            background-color: rgb(19, 137, 180);
+            height: 200px;
+        }
+        .bwrap{
+            width: 1300px;
+            height: 200px;
+            margin: auto;
+            position: relative;
+        }
+        .leftslide,.rightslide{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .center{
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 80px;
+            color: white;
+        }
+        .leftslide{
+            left: 0%;
+        }
+        .rightslide{
+            right: 0%;
+        }
+        .main{
+            width: 1300px;
+            margin: 10px auto;
+            height: 400px;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: space-between;
+        }
+        aside{
+            background-color: yellow;
+            width: 500px;
+            position: relative;
+        }
+        .overlap{
+            height: 300px;
+            width: 300px;
+            background-color: pink;
+            position: absolute;
+            top: 20px;
+            left: -40px;
+        }
+        .content{
+            /* background-color: blanchedalmond; */
+            width: 790px;
+        }
+        .top{
+            background-color: orange;
+            height:290px;
+            margin-bottom: 10px;
+            padding: 25px;
+        }
+        .bottom{
+            background-color: green;
+            height: 100px;
+        }
+        .entry{
+            padding: 15px;
+            background-color: rgb(238, 189, 98);
+            border: 1px solid rgba(238, 238, 238, 0.782);
+            border-radius: 2px;
+            display: block;
+            width: 500px;
+            margin-bottom: 15px;
+        }
+        #submit{
+            width:200px;
+            color: white;
+        }
+        #submit:hover{
+            cursor: pointer;
+        }
+        footer{
+            background-color: rgb(9, 78, 107);
+        }
+        #footer-nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px;
+        }
+        #footer-nav li{
+            list-style: none;
+            border-right: 1px solid white;
+        }
+        #footer-nav li:last-of-type{
+            border-right: none;
+        }
+        #footer-nav a{
+            color: white;
+            margin-right: 5px;
+            margin-left: 5px;
+            padding: 10px;
+        } 
+        #footer-nav a:hover{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navdiv">
+            <div class="logo">
+                <img src="./logo.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="bwrap">
+            <div class="leftslide">
+                <img  id="larrow" src="./left.png" alt="">
+            </div>
+            <div class="center">
+                Banner
+            </div>
+            <div class="rightslide">
+                <img id="rarrow" src="./right.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <aside>
+            <div class="overlap"></div>
+        </aside>
+        <div class="content">
+            <main class="top">
+                <form>
+                    <input type="text" name="tb1" class="entry">
+                    <input type="text" name="tb2" class="entry">
+                    <select name="options" id="options" class="entry">
+                        <option value="Option 1"></option>
+                        <option value="Option 2"></option>
+                    </select>
+                    <input type="Submit" value="Submit" id="submit" class="entry">
+                </form>
+            </main>
+            <main class="bottom"></main>
+        </div>
+    </section>
+    <footer>
+        <ul id="footer-nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
